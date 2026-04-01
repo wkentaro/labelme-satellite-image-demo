@@ -10,6 +10,7 @@ dependencies = [
     "pystac-client>=0.9.0",
     "rioxarray>=0.22.0",
     "shapely>=2.1.2",
+    "tqdm>=4.67.3",
 ]
 
 [dependency-groups]
