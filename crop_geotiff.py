@@ -61,10 +61,10 @@ def _crop_and_save(
         width = min(width, src.width - col_off)
         height = min(height, src.height - row_off)
         window = rasterio.windows.Window(
-            col_off=col_off,
-            row_off=row_off,
-            width=width,
-            height=height,
+            col_off=col_off,  # ty: ignore[unknown-argument]
+            row_off=row_off,  # ty: ignore[unknown-argument]
+            width=width,  # ty: ignore[unknown-argument]
+            height=height,  # ty: ignore[unknown-argument]
         )
         transform = src.window_transform(window)
         data = src.read(window=window)

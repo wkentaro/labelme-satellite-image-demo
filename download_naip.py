@@ -56,7 +56,7 @@ def _find_most_overlapping_item(aoi: dict, area_shape: Polygon) -> pystac.Item |
 
     target_area = area_shape.area
 
-    def overlap_ratio(item):
+    def overlap_ratio(item: pystac.Item) -> float:
         return shape(item.geometry).intersection(area_shape).area / target_area
 
     return max(items, key=overlap_ratio)
