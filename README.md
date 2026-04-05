@@ -2,7 +2,7 @@
 
 Annotate satellite imagery with [LabelMe](https://github.com/wkentaro/labelme) and convert the annotations to GeoJSON for use in GIS tools like QGIS.
 
-The workflow: download NAIP aerial imagery, crop to an area of interest, annotate with LabelMe, convert to GeoJSON, and open in QGIS.
+The workflow: download [NAIP](https://planetarycomputer.microsoft.com/dataset/naip) aerial imagery, crop to an area of interest, annotate with LabelMe, convert to GeoJSON, and open in [QGIS](https://qgis.org).
 
 ## Setup
 
@@ -56,6 +56,6 @@ Converts pixel coordinates from the LabelMe JSON into geo-referenced polygons us
 
 ### 5. Open in QGIS
 
-Load both the GeoTIFF and the `.geojson` in QGIS to check that annotations line up with the imagery.
+Load both the GeoTIFF and the `.geojson` in [QGIS](https://qgis.org) to check that annotations line up with the imagery.
 
 <img src="assets/06_qgis_geojson_overlay.png" width="66%">
