@@ -16,9 +16,7 @@ def _build_features(
             "type": "Feature",
             "properties": {"label": annotation["label"]},
             "geometry": mapping(
-                Polygon(
-                    [transform * (col, row) for col, row in annotation["points"]]
-                )
+                Polygon([transform * (col, row) for col, row in annotation["points"]])
             ),
         }
         for annotation in shapes
