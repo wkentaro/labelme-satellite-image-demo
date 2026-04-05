@@ -1,6 +1,6 @@
 # LabelMe Satellite Image Demo
 
-Annotate satellite imagery with [LabelMe](https://github.com/wkentaro/labelme) and convert the annotations to GeoJSON for use in GIS tools like QGIS.
+Annotate satellite imagery with [LabelMe](https://github.com/wkentaro/labelme) and convert the annotations to [GeoJSON](https://geojson.org) for use in GIS tools like QGIS.
 
 The workflow: download [NAIP](https://planetarycomputer.microsoft.com/dataset/naip) aerial imagery, crop to an area of interest, annotate with LabelMe, convert to GeoJSON, and open in [QGIS](https://qgis.org).
 
