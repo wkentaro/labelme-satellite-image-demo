@@ -54,6 +54,6 @@ Converts pixel coordinates from the LabelMe JSON into geo-referenced polygons us
 
 ### 5. Open in QGIS
 
-Load both the GeoTIFF and the `.geojson` in [QGIS](https://qgis.org) to check that annotations line up with the imagery.
+Load both the GeoTIFF and the `.geojson` in QGIS to check that annotations line up with the imagery.
 
 <img src="assets/06_qgis_geojson_overlay.png" width="66%">
