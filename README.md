@@ -4,6 +4,8 @@ Annotate satellite imagery with [LabelMe](https://github.com/wkentaro/labelme) a
 
 ## Setup
 
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then:
+
 ```bash
 uv sync
 ```
