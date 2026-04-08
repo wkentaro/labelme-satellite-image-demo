@@ -40,9 +40,11 @@ A window opens to draw a rectangle over the area you want. The output GeoTIFF ke
 uv run labelme data/naip/cushing/
 ```
 
-Open the cropped GeoTIFF in LabelMe. You can use AI-assisted annotation to speed things up — draw a bounding box and it segments the object automatically.
+Open the cropped GeoTIFF in LabelMe. You can use AI-assisted annotation to speed things up. Draw a bounding box and it segments the object automatically.
 
-<img src="assets/03_labelme_annotation_ai_box_start.png" width="33%"> <img src="assets/04_labelme_annotation_ai_box_end.png" width="33%">
+<img src="assets/03_labelme_annotation_ai_box_start.png" width="66%">
+
+<img src="assets/04_labelme_annotation_ai_box_end.png" width="66%">
 
 <img src="assets/05_labelme_annotation_done.png" width="66%">
 
