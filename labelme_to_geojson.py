@@ -75,17 +75,48 @@ def _build_features(
     return features
 
 
+def _resolve_raster_path(
+    labelme_json_path: pathlib.Path, image_path: str
+) -> pathlib.Path:
+    annotation_dir = labelme_json_path.parent.resolve()
+    referenced_path = (annotation_dir / image_path).resolve()
+    if not referenced_path.is_relative_to(annotation_dir):
+        raise ValueError(f"imagePath escapes annotation directory: {referenced_path}")
+
+    # LabelMe annotations are often created on a PNG preview. If a same-stem
+    # GeoTIFF exists, prefer it so output geometries are georeferenced.
+    geotiff_candidates = (
+        referenced_path.with_suffix(".tif"),
+        referenced_path.with_suffix(".tiff"),
+    )
+    for geotiff_candidate in geotiff_candidates:
+        if geotiff_candidate.exists():
+            return geotiff_candidate
+
+    if referenced_path.exists():
+        return referenced_path
+
+    raise FileNotFoundError(f"Referenced image does not exist: {referenced_path}")
+
+
 def _convert(labelme_json_path: pathlib.Path) -> None:
     with open(labelme_json_path) as f:
         labelme_data = json.load(f)
 
-    tiff_path = (labelme_json_path.parent / labelme_data["imagePath"]).resolve()
-    if not tiff_path.is_relative_to(labelme_json_path.parent.resolve()):
-        raise ValueError(f"imagePath escapes annotation directory: {tiff_path}")
+    tiff_path = _resolve_raster_path(
+        labelme_json_path=labelme_json_path,
+        image_path=labelme_data["imagePath"],
+    )
 
     with rasterio.open(tiff_path) as src:
         transform = src.transform
         crs = src.crs
+    if crs is None:
+        raise ValueError(
+            "Raster is not georeferenced (CRS missing). "
+            "Use a GeoTIFF annotation target, or place a same-stem .tif/.tiff "
+            "next to the LabelMe JSON."
+        )
 
     features = _build_features(shapes=labelme_data["shapes"], transform=transform)
 
