@@ -11,7 +11,6 @@ import pystac
 import pystac_client
 import rasterio
 import rasterio.windows
-from PIL import Image
 from pyproj import Transformer
 from shapely.geometry import Polygon
 from shapely.geometry import shape
@@ -146,18 +145,6 @@ def _write_cropped_geotiff(
     print(f"  Saved: {path} ({data.shape[0]} bands)")
 
 
-def _write_rgb_png(path: Path, data: np.ndarray) -> None:
-    rgb = np.transpose(data[:3], (1, 2, 0))
-    if rgb.dtype != np.uint8:
-        max_val = rgb.max()
-        if max_val > 0:
-            rgb = (rgb / max_val * 255).astype(np.uint8)
-        else:
-            rgb = rgb.astype(np.uint8)
-    Image.fromarray(obj=rgb).save(path)
-    print(f"  Saved: {path}")
-
-
 def _download_naip(name: str, lat: float, lon: float) -> None:
     aoi = _lat_lon_to_aoi_polygon(lat=lat, lon=lon)
     area_shape = shape(aoi)
@@ -198,9 +185,6 @@ def _download_naip(name: str, lat: float, lon: float) -> None:
             window=window,
             win_transform=win_transform,
         )
-
-    png_path = out_dir / f"{item.id}.png"
-    _write_rgb_png(path=png_path, data=data)
 
     print(f"\nDone! Images saved to {out_dir}/")
 
