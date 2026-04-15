@@ -2,7 +2,7 @@ ifneq ($(OS),Windows_NT)
 	SHELL := bash
 endif
 
-.PHONY: help setup format lint
+.PHONY: help setup test format lint
 .DEFAULT_GOAL := help
 
 define exec
@@ -15,6 +15,9 @@ help:
 
 setup:  # Setup the development environment
 	$(call exec,uv sync)
+
+test:  # Run tests
+	$(call exec,uv run pytest tests/ -v)
 
 lint:  # Lint code
 	$(call exec,uv run ruff format --check)
