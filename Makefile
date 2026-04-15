@@ -30,3 +30,4 @@ lint:  # Lint code
 	$(call exec,uv run taplo fmt --check $(shell git ls-files "*.toml"))
 	$(call exec,uv run mdformat --check $(shell git ls-files "*.md"))
 	$(call exec,uv run yamlfix --check $(shell git ls-files "*.yml" "*.yaml"))
+	$(call exec,uv run typos)
