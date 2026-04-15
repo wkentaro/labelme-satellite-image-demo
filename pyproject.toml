@@ -23,6 +23,7 @@ dev = [
   "ruff>=0.15.8",
   "taplo>=0.9.3",
   "ty>=0.0.27",
+  "yamlfix>=1.19.1",
 ]
 
 [tool.ruff.lint]
