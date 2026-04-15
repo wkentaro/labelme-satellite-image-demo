@@ -20,6 +20,7 @@ dev = [
   "ipython>=9.12.0",
   "mdformat>=1.0.0",
   "mdformat-frontmatter>=2.0.10",
+  "pytest>=9.0.3",
   "ruff>=0.15.8",
   "taplo>=0.9.3",
   "ty>=0.0.27",
