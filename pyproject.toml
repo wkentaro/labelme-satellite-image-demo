@@ -30,11 +30,11 @@ dev = [
 
 [tool.ruff.lint]
 select = [
+  "ANN", # flake8-annotations
   "E",   # pycodestyle
   "F",   # pyflakes
   "I",   # isort
   "UP",  # pyupgrade
-  "ANN", # flake8-annotations
 ]
 
 [tool.ruff.lint.isort]
