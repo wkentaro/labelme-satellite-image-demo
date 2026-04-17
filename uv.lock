@@ -443,8 +443,8 @@ wheels = [
 
 [[package]]
 name = "labelme"
-version = "6.0.1.dev167+gee2a6078a"
-source = { git = "https://github.com/wkentaro/labelme.git?rev=main#ee2a6078a0be506f5395da574cbe795b9a2942db" }
+version = "6.1.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "imgviz" },
     { name = "loguru" },
@@ -458,6 +458,10 @@ dependencies = [
     { name = "pyyaml" },
     { name = "scikit-image" },
     { name = "tifffile" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/3c/c1e59a30135e68d57b48a31dc6dbc3298dc67bbb88c3f801ac5931a1892a/labelme-6.1.0.tar.gz", hash = "sha256:45236c039b1d8c53ff6df702f63a38c8542b395b24cd1541040b0057d78a0721", size = 11798813, upload-time = "2026-04-16T15:02:45.072Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a8/73/42a4ee311d8e094b790966d8a68c1fef31a1e9d4a94261e9b6eeb3de46c6/labelme-6.1.0-py3-none-any.whl", hash = "sha256:ddb209cd48fe1d1e3140f8a094898cf5a0dac6457c75b35345f48aafff906e45", size = 575538, upload-time = "2026-04-16T15:02:42.646Z" },
 ]
 
 [[package]]
@@ -490,7 +494,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "labelme", git = "https://github.com/wkentaro/labelme.git?rev=main" },
+    { name = "labelme", specifier = ">=6.1.0" },
     { name = "opencv-python", specifier = ">=4.11.0" },
     { name = "pillow", specifier = ">=12.1.1" },
     { name = "planetary-computer", specifier = ">=1.0.0" },
@@ -754,7 +758,7 @@ wheels = [
 
 [[package]]
 name = "osam"
-version = "0.4.0a2"
+version = "0.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -765,9 +769,9 @@ dependencies = [
     { name = "pillow" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/bc/ed/9facd52953f6e3855c9ac57fdc2f8242a47e951ab1cd1e774c75722d666f/osam-0.4.0a2.tar.gz", hash = "sha256:5b3ace14c72f5020c8ce7fde3bb18710f674ca889845098992b4334be50e18d0", size = 28427852, upload-time = "2026-04-14T23:38:27.008Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/04/90/16dcc070796216b6729a93cfbbf12012b92ee54523509aafea546f13b940/osam-0.4.0.tar.gz", hash = "sha256:11b73c8eecd66929d860c1e1a0e5167a352b5f44b5d483d3ff98e98680fd987f", size = 28427843, upload-time = "2026-04-16T13:49:48.695Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/29/41/e7f0784b35ecefe3ac15c2cd0831a220c0742a945f532d8da4df589e46f5/osam-0.4.0a2-py3-none-any.whl", hash = "sha256:3b73b1d6c43ff4b357295a4e339bb20519bd2891fce750c72be2427aa16151e5", size = 2210445, upload-time = "2026-04-14T23:38:24.736Z" },
+    { url = "https://files.pythonhosted.org/packages/27/d3/937ed798428ea240688ade7a5ea7b3957999ef5ba839193b011a2ccafdea/osam-0.4.0-py3-none-any.whl", hash = "sha256:45cd1979a3b8b4fb19b6d619e7b993b1062f80dda123f268cefbfa500affc1a6", size = 2210418, upload-time = "2026-04-16T13:49:45.481Z" },
 ]
 
 [[package]]

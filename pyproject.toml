@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-  "labelme",
+  "labelme>=6.1.0",
   "opencv-python>=4.11.0",
   "pillow>=12.1.1",
   "planetary-computer>=1.0.0",
@@ -42,6 +42,3 @@ force-single-line = true
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
-
-[tool.uv.sources]
-labelme = { git = "https://github.com/wkentaro/labelme.git", rev = "main" }
