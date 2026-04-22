@@ -98,3 +98,7 @@ To color by class in QGIS:
 <img src="assets/07_qgis_symbology_categorized.png" width="66%" alt="Categorized symbology in QGIS">
 
 <img src="assets/08_qgis_geojson_overlay_categorized.png" width="66%" alt="GeoJSON overlay colored by class in QGIS">
+
+## License
+
+MIT ([LICENSE](https://github.com/wkentaro/labelme-satellite-image-demo/blob/main/LICENSE))
