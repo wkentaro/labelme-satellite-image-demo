@@ -8,7 +8,7 @@ Annotate satellite imagery in LabelMe. Export to any GIS tool.
 <tr>
 <td width="33%"><img src="assets/02_cushing_cropped_thumbnail.jpg" alt="Cropped NAIP tile"></td>
 <td width="33%"><img src="assets/05_labelme_annotation_done.png" alt="Annotated in LabelMe"></td>
-<td width="33%"><img src="assets/06_qgis_geojson_overlay.png" alt="Annotations overlaid in QGIS as GeoJSON"></td>
+<td width="33%"><img src="assets/08_qgis_geojson_overlay_categorized.png" alt="Annotations overlaid in QGIS as GeoJSON"></td>
 </tr>
 <tr>
 <td align="center"><sub>NAIP tile</sub></td>
@@ -82,8 +82,19 @@ uv run python labelme_to_geojson.py data/naip/cushing/<tile>.json
 
 Converts LabelMe's pixel coordinates into geo-referenced polygons using the GeoTIFF's affine transform. Supports `polygon`, `rectangle`, and `circle` annotations.
 
-### 6. Verify in QGIS
+### 6. Open in QGIS
 
 Load both the GeoTIFF and the `.geojson` in QGIS to check that annotations line up with the imagery.
 
 <img src="assets/06_qgis_geojson_overlay.png" width="66%" alt="GeoJSON overlay in QGIS">
+
+To color by class in QGIS:
+
+1. Right-click the layer → **Properties** → **Symbology**
+2. Change the dropdown from **Single Symbol** to **Categorized**
+3. Set **Value** to `label`
+4. Click **Classify** → **OK**
+
+<img src="assets/07_qgis_symbology_categorized.png" width="66%" alt="Categorized symbology in QGIS">
+
+<img src="assets/08_qgis_geojson_overlay_categorized.png" width="66%" alt="GeoJSON overlay colored by class in QGIS">
