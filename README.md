@@ -91,9 +91,9 @@ Load both the GeoTIFF and the `.geojson` in QGIS to check that annotations line 
 To color by class in QGIS:
 
 1. Right-click the layer → **Properties** → **Symbology**
-2. Change the dropdown from **Single Symbol** to **Categorized**
-3. Set **Value** to `label`
-4. Click **Classify** → **OK**
+1. Change the dropdown from **Single Symbol** to **Categorized**
+1. Set **Value** to `label`
+1. Click **Classify** → **OK**
 
 <img src="assets/07_qgis_symbology_categorized.png" width="66%" alt="Categorized symbology in QGIS">
 
