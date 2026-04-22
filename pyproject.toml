@@ -3,6 +3,9 @@ name = "labelme-satellite-image-demo"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Kentaro Wada", email = "www.kentaro.wada@gmail.com" }]
 requires-python = ">=3.14"
 dependencies = [
   "labelme>=6.1.0",
