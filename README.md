@@ -19,6 +19,12 @@ Annotate satellite imagery in LabelMe. Export to any GIS tool.
 
 Downloads a [NAIP](https://planetarycomputer.microsoft.com/dataset/naip) aerial image from the [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/), annotates it in [LabelMe](https://github.com/wkentaro/labelme) with AI-assisted segmentation, and exports geo-referenced [GeoJSON](https://geojson.org) for [QGIS](https://qgis.org) or any GIS stack.
 
+## Video walkthrough
+
+Featured on the [Satellite Image Deep Learning podcast](https://www.satellite-image-deep-learning.com/p/geospatial-annotation-with-labelme). The walkthrough starts at [2:13 on YouTube](https://youtu.be/lb8Fij0vqHs?t=133):
+
+<a href="https://youtu.be/lb8Fij0vqHs?t=133"><img src="assets/00_youtube_thumbnail.jpg" width="33%" alt="Watch the walkthrough on YouTube"></a>
+
 ## Prerequisites
 
 - [uv](https://docs.astral.sh/uv/getting-started/installation/) - Manage Python and dependencies.
